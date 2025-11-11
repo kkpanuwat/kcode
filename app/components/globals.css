@@ -1,0 +1,8 @@
+html, body {
+  scroll-behavior: smooth;
+  font-family: 'Inter', sans-serif;
+}
+
+section {
+  transition: all 0.3s ease-in-out;
+}

@@ -41,8 +41,8 @@ services:
       - "3000"
     environment:
       - NODE_ENV=production
-      - VIRTUAL_HOST=kcode.online,www.kcode.online
-      - LETSENCRYPT_HOST=kcode.online,www.kcode.online
+      - VIRTUAL_HOST=kcode.online,www.kcode.online,kcode.fun,www.kcode.fun
+      - LETSENCRYPT_HOST=kcode.online,www.kcode.online,kcode.fun,www.kcode.fun
       - LETSENCRYPT_EMAIL=info.surprisehub@gmail.com
     networks:
       - webnet

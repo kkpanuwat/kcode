@@ -6,7 +6,7 @@ export default function Hero() {
             className="flex flex-col justify-center items-center min-h-[100vh] px-6 text-center bg-gray-50"
         >
             <h1 className="text-5xl md:text-6xl font-extrabold text-gray-900 mb-6">
-                Hello, I'm Kcode Panuwat.
+                Hello, I'm Kcode.
             </h1>
             <p className="text-gray-600 max-w-2xl leading-relaxed mb-8">
                 I like building things that feel simple, thoughtful, and real.

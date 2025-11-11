@@ -53,6 +53,6 @@ jobs:
             docker compose down || true
 
             echo "🚀 Starting new container on port 80..."
-            docker compose up -d --build
+            docker compose up -d --force-recreate
 
             echo "✅ Deployment complete!"

@@ -14,7 +14,6 @@ export default function Navbar() {
         </h1>
 
         <ul className="hidden md:flex space-x-8 text-gray-700 font-medium">
-          <li><a href="#home" className="hover:text-blue-500">Home</a></li>
           <li><a href="#course" className="hover:text-blue-500">Course</a></li>
           <li><a href="#docs" className="hover:text-blue-500">Docs</a></li>
           <li><a href="#api" className="hover:text-blue-500">API</a></li>

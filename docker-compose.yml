@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   nginx-proxy:
-    image: jwilder/nginx-proxy:alpine
+    image: nginxproxy/nginx-proxy:alpine
     container_name: nginx-proxy
     restart: always
     ports:
@@ -16,9 +16,9 @@ services:
     networks:
       - webnet
 
-  letsencrypt:
-    image: jrcs/letsencrypt-nginx-proxy-companion
-    container_name: letsencrypt
+  acme-companion:
+    image: nginxproxy/acme-companion
+    container_name: acme-companion
     restart: always
     depends_on:
       - nginx-proxy

@@ -46,7 +46,13 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
             cd /opt/kcode
+            echo "🧱 Pulling latest Docker image..."
             docker pull ${{ secrets.DOCKERHUB_USERNAME }}/kcode:latest
-            docker stop kcode || true
-            docker rm kcode || true
-            docker run -d --name kcode -p 3000:3000 ${{ secrets.DOCKERHUB_USERNAME }}/kcode:latest
+
+            echo "🧹 Stopping existing containers..."
+            docker compose down || true
+
+            echo "🚀 Starting new container on port 80..."
+            docker compose up -d --build
+
+            echo "✅ Deployment complete!"

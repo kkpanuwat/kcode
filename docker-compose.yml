@@ -10,23 +10,6 @@ services:
       - "443:443"
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
-      - ./certs:/etc/nginx/certs:ro
-      - ./vhost.d:/etc/nginx/vhost.d
-      - ./html:/usr/share/nginx/html
-    networks:
-      - webnet
-
-  acme-companion:
-    image: nginxproxy/acme-companion
-    container_name: acme-companion
-    restart: always
-    depends_on:
-      - nginx-proxy
-    environment:
-      - NGINX_PROXY_CONTAINER=nginx-proxy
-      - DEFAULT_EMAIL=info.surprisehub@gmail.com
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock:ro
       - ./certs:/etc/nginx/certs:rw
       - ./vhost.d:/etc/nginx/vhost.d
       - ./html:/usr/share/nginx/html
@@ -42,8 +25,7 @@ services:
     environment:
       - NODE_ENV=production
       - VIRTUAL_HOST=kcode.online,www.kcode.online,kcode.fun,www.kcode.fun
-      - LETSENCRYPT_HOST=kcode.online,www.kcode.online,kcode.fun,www.kcode.fun
-      - LETSENCRYPT_EMAIL=info.surprisehub@gmail.com
+      - SSL_CERT=/etc/nginx/certs
     networks:
       - webnet
 

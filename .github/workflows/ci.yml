@@ -46,6 +46,7 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
             cd /opt/kcode
+            git pull origin main
             docker stop kcode || true
             docker rm kcode || true
             docker image rm ${{ secrets.DOCKERHUB_USERNAME }}/kcode:latest || true

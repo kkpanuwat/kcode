@@ -50,14 +50,3 @@ services:
 networks:
   webnet:
     driver: bridge
-
-    # Test
-    # Test
-    # Test
-    # Test
-    # Test
-    # Test
-    # Test
-    # Test
-    # Test
-    # Test

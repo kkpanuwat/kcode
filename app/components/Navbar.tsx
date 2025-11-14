@@ -38,21 +38,13 @@ export default function Navbar() {
               <a href="#home" className="hover:text-blue-500" onClick={() => setIsOpen(false)}>Home</a>
             </li>
             <li>
-              <a href="#course" className="hover:text-blue-500" onClick={() => setIsOpen(false)}>Course</a>
+              <a href="https://docs.kcode.online" className="hover:text-blue-500" onClick={() => setIsOpen(false)}>Course</a>
             </li>
             <li>
               <a href="#docs" className="hover:text-blue-500" onClick={() => setIsOpen(false)}>Docs</a>
             </li>
             <li>
               <a href="#api" className="hover:text-blue-500" onClick={() => setIsOpen(false)}>API</a>
-            </li>
-            <li>
-              <button
-                className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-full shadow-md transition"
-                onClick={() => setIsOpen(false)}
-              >
-                LET’S TALK
-              </button>
             </li>
           </ul>
         </div>
